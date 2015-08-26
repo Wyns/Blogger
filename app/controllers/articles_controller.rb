@@ -17,7 +17,13 @@ def create
     redirect_to article_path(@article)
 
 end
+def delete
+  @article = article.find(param[:id])
+end
 def destroy
+  article = article.find(params[:id])
+  article.destroy
+  redirect_to(:action => "index")
 end
 
 end
