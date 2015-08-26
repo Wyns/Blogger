@@ -17,5 +17,7 @@ def create
     redirect_to article_path(@article)
 
 end
+def destroy
+end
 
 end
